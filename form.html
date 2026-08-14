@@ -7,11 +7,7 @@
 </head>
 <body>
     
-    <form   action="produto.php" 
-            method="post" 
-            enctype="multipart/form-data"
-        >
-
+    <form action="cliente.php" method="post" enctype="multipart/form-data">
         <legend><h2>Cliente</h2></legend>
         <fieldset>
             <label>
@@ -25,7 +21,9 @@
             </label>
             <button>Salvar</button>
         </fieldset>
+    </form>
 
+    <form action="marca.php" method="post" enctype="multipart/form-data">
         <legend><h2>Marca</h2></legend>
         <fieldset>
             <label>
@@ -36,7 +34,9 @@
             </label>
             <button>Salvar</button>
         </fieldset>
+    </form>
 
+    <form action="produto.php" method="post" enctype="multipart/form-data">
         <legend><h2>Produto</h2></legend>
         <fieldset>
             <label>
@@ -53,7 +53,9 @@
             </label>
             <button>Salvar</button>
         </fieldset>
+    </form>
 
+    <form action="pedido.php" method="post" enctype="multipart/form-data">
         <legend><h2>Pedido</h2></legend>
         <fieldset>
             <label>
@@ -67,11 +69,13 @@
             </label>
             <button>Salvar</button>
         </fieldset>
-
+    </form>
+    
+    <form action="itens_compra.php" method="post" enctype="multipart/form-data">
         <legend><h2>Itens Compra</h2></legend>
         <fieldset>
             <label>
-                Id do Pedido <input type="text" name=":ic_pedido_id">
+                Id do Pedido: <input type="text" name=":ic_pedido_id">
             </label>
             <label>
                 Id do Produto: <input type="text" name=":ic_produto_id">
@@ -80,11 +84,10 @@
                 Quantidade: <input type="text" name=":ic_quant">
             </label>
             <label>
-                Preço Unitário: <input type="text" name=":ic_preco"
+                Preço Unitário: <input type="text" name=":ic_preco">
             </label>
             <button>Salvar</button>
         </fieldset>
-
     </form>
 
 </body>
