@@ -11,19 +11,80 @@
             method="post" 
             enctype="multipart/form-data"
         >
-        <label>
-            Nome <input type="text" name=":prod_nome">
-        </label>
-        <label>
-            Preço: <input type="text" name=":prod_preco" >
-        </label>
-        <label>
-            Estoque: <input type="text" name=":prod_estoque" >
-        </label>
-        <label>
-            Id da marca: <input type='text' name=":prod_id_marca">
-        </label>
-        <button>Salvar</button>
+
+        <legend><h2>Cliente</h2></legend>
+        <fieldset>
+            <label>
+                Nome: <input type="text" name=":cli_nome">
+            </label>
+            <label>
+                Email: <input type="text" name=":cli_email">
+            </label>
+            <label>
+                Cidade: <input type="text" name=":cli_cidade">
+            </label>
+            <button>Salvar</button>
+        </fieldset>
+
+        <legend><h2>Marca</h2></legend>
+        <fieldset>
+            <label>
+                Nome: <input type="text" name=":mar_nome">
+            </label>
+            <label>
+                País de origem: <input type="text" name=":mar_pais">
+            </label>
+            <button>Salvar</button>
+        </fieldset>
+
+        <legend><h2>Produto</h2></legend>
+        <fieldset>
+            <label>
+                Nome <input type="text" name=":prod_nome">
+            </label>
+            <label>
+                Preço: <input type="text" name=":prod_preco">
+            </label>
+            <label>
+                Estoque: <input type="text" name=":prod_estoque">
+            </label>
+            <label>
+                Id da Marca: <input type='text' name=":prod_id_marca">
+            </label>
+            <button>Salvar</button>
+        </fieldset>
+
+        <legend><h2>Pedido</h2></legend>
+        <fieldset>
+            <label>
+                Data do pedido <input type="text" name=":ped_data">
+            </label>
+            <label>
+                Status: <input type="text" name=":ped_status">
+            </label>
+            <label>
+                Id do Cliente: <input type="text" name=":ped_id_cliente">
+            </label>
+            <button>Salvar</button>
+        </fieldset>
+
+        <legend><h2>Itens Compra</h2></legend>
+        <fieldset>
+            <label>
+                Id do Pedido <input type="text" name=":ic_pedido_id">
+            </label>
+            <label>
+                Id do Produto: <input type="text" name=":ic_produto_id">
+            </label>
+            <label>
+                Quantidade: <input type="text" name=":ic_quant">
+            </label>
+            <label>
+                Preço Unitário: <input type="text" name=":ic_preco"
+            </label>
+            <button>Salvar</button>
+        </fieldset>
+
     </form>
 
 </body>
