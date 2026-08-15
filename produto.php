@@ -8,7 +8,7 @@ try {
     $pdo = new PDO("pgsql:host=$host;dbname=$db;", $user, $pass);
     
     $sql = "INSERT INTO public.produtos(nome_produto, preco, estoque, marca_id)
-	            VALUES (:prod_nome, :prod_preco, :prod_estoque, :prod_marca_id)";
+	            VALUES (:prod_nome, :prod_preco, :prod_estoque, :prod_marca_id) RETURNING id";
     $stmt = $pdo->prepare($sql);
 
     $nome = $_POST[':prod_nome'];
@@ -37,7 +37,9 @@ try {
         ]
     );
 
-    echo "Produto inserido com sucesso! com o ID: ". $pdo->lastInsertID();
+    $result = $stmt->fetch();
+    $id = $result['id'];
+    echo "Produto inserido com sucesso! com o ID: ". $id;
 
 } catch (PDOException $e) {
     echo "Erro: " . $e->getMessage();

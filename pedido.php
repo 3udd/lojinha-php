@@ -23,7 +23,7 @@ try {
         ]
     );
 
-    echo "Cliente inserido com sucesso! com o ID: ". $pdo->lastInsertID();
+    echo "Pedido inserido com sucesso! com o ID: ". $pdo->lastInsertID();
 
 } catch (PDOException $e) {
     echo "Erro: " . $e->getMessage();
