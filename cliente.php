@@ -8,7 +8,7 @@ try {
     $pdo = new PDO("pgsql:host=$host;dbname=$db;", $user, $pass);
     
     $sql = "INSERT INTO public.clientes(nome_cliente, email, cidade)
-	            VALUES (:cli_nome, :cli_email, :cli_cidade);";
+	            VALUES (:cli_nome, :cli_email, :cli_cidade)";
     $stmt = $pdo->prepare($sql);
 
     $nome = $_POST[':cli_nome'];

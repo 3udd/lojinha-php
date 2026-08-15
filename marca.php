@@ -8,7 +8,7 @@ try {
     $pdo = new PDO("pgsql:host=$host;dbname=$db;", $user, $pass);
     
     $sql = "INSERT INTO public.marcas(nome_marca, pais_origem)
-	        VALUES (:mar_nome, :mar_pais);";
+	            VALUES (:mar_nome, :mar_pais)";
     $stmt = $pdo->prepare($sql);
 
     $nome = $_POST[':mar_nome'];

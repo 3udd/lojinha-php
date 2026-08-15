@@ -8,7 +8,7 @@ try {
     $pdo = new PDO("pgsql:host=$host;dbname=$db;", $user, $pass);
     
     $sql = "INSERT INTO public.produtos(nome_produto, preco, estoque, marca_id)
-	        VALUES (:prod_nome, :prod_preco, :prod_estoque, :prod_marca_id)";
+	            VALUES (:prod_nome, :prod_preco, :prod_estoque, :prod_marca_id)";
     $stmt = $pdo->prepare($sql);
 
     $nome = $_POST[':prod_nome'];
